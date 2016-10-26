@@ -19,14 +19,30 @@ This code may only be used under the MIT style license found at https://abdonrd.
     <link rel="import" href="../konami-code.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
+      .vertical-section-container {
+        max-width: 580px;
+      }
     </style>
   </head>
   <body>
     <div class="vertical-section-container centered">
-      <h3>konami-code</h3>
+      <h3>Launch a function after Konami Code (↑↑↓↓←→←→BA)</h3>
       <demo-snippet>
         <template>
           <konami-code></konami-code>
+          <p>Type the Konami Code to launch the easter egg.</p>
+
+          <script>
+            var konamiCode = document.querySelector('konami-code');
+            konamiCode.addEventListener('code-completed', function(event) {
+              alert('Easter egg!');
+            });
+          </script>
+
+          <!--
+          You also can use the Polymer annotated event listener setup:
+          <konami-code on-code-completed="_launchEasterEgg"></konami-code>
+          -->
         </template>
       </demo-snippet>
     </div>
