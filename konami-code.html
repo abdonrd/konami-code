@@ -5,6 +5,7 @@ This code may only be used under the MIT style license found at https://abdonrd.
 -->
 
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
 
 <!--
 Polymer element to listen the Konami Code (↑↑↓↓←→←→BA).
@@ -13,18 +14,70 @@ Polymer element to listen the Konami Code (↑↑↓↓←→←→BA).
 -->
 
 <dom-module id="konami-code">
-  <template>
-    <style>
-      :host {
-        display: block;
-      }
-    </style>
-
-    <content></content>
-  </template>
   <script>
     Polymer({
-      is: 'konami-code'
+      is: 'konami-code',
+
+      properties: {
+        _konamiCode: {
+          type: Array,
+          value: function() {
+            return [
+              'up',
+              'up',
+              'down',
+              'down',
+              'left',
+              'right',
+              'left',
+              'right',
+              'b',
+              'a'
+            ];
+          }
+        },
+
+        _nextCodeIndex: {
+          type: Number,
+          value: 0
+        },
+
+        _keydownListener: {
+          type: Object
+        }
+      },
+
+      attached: function() {
+        this._keydownListener = this.__onBodyKeydown.bind(this);
+        document.body.addEventListener('keydown', this._keydownListener);
+      },
+
+      detached: function() {
+        document.body.removeEventListener('keydown', this._keydownListener);
+      },
+
+      __onBodyKeydown: function(event) {
+        if (this._isExpectedKey(event)) {
+          this._nextCodeIndex++;
+        } else {
+          this._nextCodeIndex = 0;
+        }
+
+        if (this._isCodeComplete()) {
+          this.fire('code-completed');
+          this._nextCodeIndex = 0;
+        }
+      },
+
+      _isExpectedKey: function(event) {
+        var expectedKey = this._konamiCode[this._nextCodeIndex];
+
+        return Polymer.IronA11yKeysBehavior.keyboardEventMatchesKeys(event, expectedKey);
+      },
+
+      _isCodeComplete: function() {
+        return this._nextCodeIndex === this._konamiCode.length;
+      }
     });
   </script>
 </dom-module>

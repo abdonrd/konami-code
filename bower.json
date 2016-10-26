@@ -16,6 +16,7 @@
   },
   "main": "konami-code.html",
   "dependencies": {
+    "iron-a11y-keys-behavior": "PolymerElements/iron-a11y-keys-behavior#^1.1.0",
     "polymer": "Polymer/polymer#^1.6.0"
   },
   "devDependencies": {
