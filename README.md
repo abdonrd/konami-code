@@ -1,4 +1,5 @@
 [![Build status][travis-image]][travis-url]
+[![Published on webcomponents.org][webcomponents-image]][webcomponents-url]
 
 ## \<konami-code\>
 
@@ -35,3 +36,5 @@ You also can use the Polymer annotated event listener setup:
 
 [travis-image]: https://travis-ci.org/abdonrd/konami-code.svg?branch=master
 [travis-url]: https://travis-ci.org/abdonrd/konami-code
+[webcomponents-image]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
+[webcomponents-url]: https://beta.webcomponents.org/element/abdonrd/konami-code
