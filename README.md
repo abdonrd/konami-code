@@ -18,6 +18,19 @@ Example:
 -->
 ```html
 <konami-code></konami-code>
+<p>Type the Konami Code to launch the easter egg.</p>
+
+<script>
+  var konamiCode = document.querySelector('konami-code');
+  konamiCode.addEventListener('code-completed', function(event) {
+    alert('Easter egg!');
+  });
+</script>
+
+<!--
+You also can use the Polymer annotated event listener setup:
+<konami-code on-code-completed="_launchEasterEgg"></konami-code>
+-->
 ```
 
 [travis-image]: https://travis-ci.org/abdonrd/konami-code.svg?branch=master
