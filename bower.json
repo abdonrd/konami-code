@@ -1,0 +1,28 @@
+{
+  "name": "konami-code",
+  "description": "Polymer element to listen the Konami Code (↑↑↓↓←→←→BA)",
+  "authors": [
+    "Abdón Rodríguez Davila <a@abdonrd.com>"
+  ],
+  "keywords": [
+    "web-component",
+    "polymer",
+    "konami-code"
+  ],
+  "license": "https://abdonrd.github.io/LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/abdonrd/konami-code.git"
+  },
+  "main": "konami-code.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.6.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "private": true
+}
