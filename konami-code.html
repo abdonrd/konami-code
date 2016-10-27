@@ -78,6 +78,12 @@ Polymer element to listen the Konami Code (↑↑↓↓←→←→BA).
       _isCodeComplete: function() {
         return this._nextCodeIndex === this._konamiCode.length;
       }
+
+      /**
+       * Fired when the code is completed.
+       *
+       * @event code-completed
+       */
     });
   </script>
 </dom-module>
