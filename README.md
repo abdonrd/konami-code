@@ -1,5 +1,5 @@
-[![Build status][travis-image]][travis-url]
-[![Published on webcomponents.org][webcomponents-image]][webcomponents-url]
+[![Build status](https://travis-ci.org/abdonrd/konami-code.svg?branch=master)](https://travis-ci.org/abdonrd/konami-code)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/abdonrd/konami-code)
 
 ## \<konami-code\>
 
@@ -33,8 +33,3 @@ You also can use the Polymer annotated event listener setup:
 <konami-code on-code-completed="_launchEasterEgg"></konami-code>
 -->
 ```
-
-[travis-image]: https://travis-ci.org/abdonrd/konami-code.svg?branch=master
-[travis-url]: https://travis-ci.org/abdonrd/konami-code
-[webcomponents-image]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
-[webcomponents-url]: https://beta.webcomponents.org/element/abdonrd/konami-code
