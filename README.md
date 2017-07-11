@@ -3,7 +3,7 @@
 
 ## \<konami-code\>
 
-Polymer element to listen the Konami Code (↑↑↓↓←→←→BA).
+Web Component (with Polymer) to listen the Konami Code (↑↑↓↓←→←→BA).
 
 Example:
 <!---

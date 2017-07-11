@@ -1,6 +1,6 @@
 {
   "name": "konami-code",
-  "description": "Polymer element to listen the Konami Code (↑↑↓↓←→←→BA)",
+  "description": "Web Component (with Polymer) to listen the Konami Code (↑↑↓↓←→←→BA)",
   "authors": [
     "Abdón Rodríguez Davila <a@abdonrd.com>"
   ],
@@ -22,7 +22,7 @@
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
-    "web-component-tester": "^4.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
   "private": true
