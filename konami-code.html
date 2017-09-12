@@ -58,7 +58,7 @@ Web Component (with Polymer) to listen the Konami Code (↑↑↓↓←→←→
 
       __onBodyKeydown: function(event) {
         if (this._isExpectedKey(event)) {
-          this._nextCodeIndex++;
+          this._nextCodeIndex += 1;
         } else {
           this._nextCodeIndex = 0;
         }
@@ -72,6 +72,7 @@ Web Component (with Polymer) to listen the Konami Code (↑↑↓↓←→←→
       _isExpectedKey: function(event) {
         var expectedKey = this._konamiCode[this._nextCodeIndex];
 
+        // eslint-disable-next-line max-len
         return Polymer.IronA11yKeysBehavior.keyboardEventMatchesKeys(event, expectedKey);
       },
 
